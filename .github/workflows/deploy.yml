@@ -33,7 +33,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: dirofftech/dirofftech-dot-com:latest
+          tags: jimdtech/dirofftech-dot-com:latest
 
       - name: Deploy to DigitalOcean
         uses: appleboy/ssh-action@v1.0.3
