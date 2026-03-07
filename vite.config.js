@@ -1,16 +1,16 @@
-import { defineConfig } from 'vite';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
-import { imagetools } from 'vite-imagetools';
+import { defineConfig } from "vite";
+import { viteStaticCopy } from "vite-plugin-static-copy";
+import { imagetools } from "vite-imagetools";
 
 export default defineConfig({
-	// Project Source Files
-  root: 'src',
-  publicDir: '../public',
+  // Project Source Files
+  root: "src",
+  publicDir: "../public",
 
-	// Production Build Output Directory
+  // Production Build Output Directory
   build: {
-    outDir: '../dist',
-    emptyOutDir: true // Clears the dist directory before building
+    outDir: "../dist",
+    emptyOutDir: true, // Clears the dist directory before building
   },
   plugins: [
     imagetools(),
@@ -18,10 +18,10 @@ export default defineConfig({
       targets: [
         {
           // Copy the license file for the Roboto font to production
-          src: 'fonts/OFL.txt',
-          dest: 'assets'
-        }
-      ]
-    })
-  ]
+          src: "fonts/OFL.txt",
+          dest: "assets",
+        },
+      ],
+    }),
+  ],
 });

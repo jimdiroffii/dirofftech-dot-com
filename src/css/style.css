@@ -12,10 +12,10 @@
  * Central place to manage theme colors and other reusable values.
  */
 :root {
-	--clr-dark: #000;
-	--clr-darkgrey: #222;
-	--clr-light: #fff;
-	--textarea-header-height: 0.8em;
+  --clr-dark: #000;
+  --clr-darkgrey: #222;
+  --clr-light: #fff;
+  --textarea-header-height: 0.8em;
 }
 
 /***
@@ -23,11 +23,11 @@
  * Self-hosted variable fonts for performance and flexibility.
  */
 @font-face {
-	font-family: "Roboto";
-	src: url("/fonts/roboto-variable.woff2") format("woff2");
-	font-weight: 100 900; /* The range of weights this font file supports */
-	font-style: normal;
-	font-display: swap; /* Tells the browser to show fallback font while this loads */
+  font-family: "Roboto";
+  src: url("/fonts/roboto-variable.woff2") format("woff2");
+  font-weight: 100 900; /* The range of weights this font file supports */
+  font-style: normal;
+  font-display: swap; /* Tells the browser to show fallback font while this loads */
 }
 
 /***
@@ -35,53 +35,53 @@
  * Basic resets and default styles for the entire document.
  */
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-	font-family: "Roboto", sans-serif;
-	font-weight: 400;
-	height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  height: 100%;
 }
 
 body {
-	background-color: var(--clr-darkgrey);
-	color: var(--clr-light);
-	margin: 0;
+  background-color: var(--clr-darkgrey);
+  color: var(--clr-light);
+  margin: 0;
 }
 
 a {
-	color: var(--clr-light);
-	text-decoration: none;
+  color: var(--clr-light);
+  text-decoration: none;
 }
 
 /***
  * Accessibility Helpers
  */
 .skip-link {
-	position: absolute;
-	top: -40px;
-	left: 0;
-	background: #000;
-	color: #fff;
-	padding: 0.5rem 1rem;
-	text-decoration: none;
-	transition: top 0.2s;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: top 0.2s;
 }
 
 .skip-link:focus-visible {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: #000;
-	color: #fff;
-	padding: 0.5rem 1rem;
-	z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
 }
 
 /***
@@ -89,13 +89,13 @@ a {
  * Reusable classes for structuring page content.
  */
 .container {
-	width: 90%; /* Ensures some padding on very narrow screens */
-	max-width: 1200px; /* Sets the maximum width for content on large screens */
-	margin-inline: auto; /* A modern way to center the container horizontally */
+  width: 90%; /* Ensures some padding on very narrow screens */
+  max-width: 1200px; /* Sets the maximum width for content on large screens */
+  margin-inline: auto; /* A modern way to center the container horizontally */
 
-	/* Establishes a grid for direct children */
-	display: grid;
-	align-items: center;
+  /* Establishes a grid for direct children */
+  display: grid;
+  align-items: center;
 }
 
 /***
@@ -103,61 +103,61 @@ a {
  * Styles for the main site header and its navigation.
  */
 header {
-	padding: 1rem 0;
-	min-height: 2.5rem;
+  padding: 1rem 0;
+  min-height: 2.5rem;
 
-	/* Provides the positioning anchor for the absolute-positioned mobile menu */
-	position: relative;
+  /* Provides the positioning anchor for the absolute-positioned mobile menu */
+  position: relative;
 
-	/* Aligns the header children to the center of the header */
-	display: flex;
-	align-items: center;
+  /* Aligns the header children to the center of the header */
+  display: flex;
+  align-items: center;
 }
 
 header .container {
-	/* Defines a 3-column grid: [Brand] [Nav] [Empty Space] for perfect centering */
-	grid-template-columns: 1fr auto 1fr;
+  /* Defines a 3-column grid: [Brand] [Nav] [Empty Space] for perfect centering */
+  grid-template-columns: 1fr auto 1fr;
 }
 
 .header-brand {
-	grid-column: 1 / 2; /* Places the brand in the first column */
-	justify-self: start; /* Aligns the brand to the left of its column */
+  grid-column: 1 / 2; /* Places the brand in the first column */
+  justify-self: start; /* Aligns the brand to the left of its column */
 }
 
 .header-nav {
-	grid-column: 2 / 3; /* Places the navigation in the center column */
+  grid-column: 2 / 3; /* Places the navigation in the center column */
 }
 
 .header-nav ul {
-	display: flex; /* Aligns nav links in a row */
-	margin: 0;
-	padding: 0;
-	list-style-type: none; /* Removes default bullet points */
+  display: flex; /* Aligns nav links in a row */
+  margin: 0;
+  padding: 0;
+  list-style-type: none; /* Removes default bullet points */
 }
 
 .header-nav a {
-	display: inline-block;
-	padding: 0.5rem 1rem;
-	transition: background-color 0.2s ease-in-out; /* Hover effects */
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease-in-out; /* Hover effects */
 }
 
 .header-nav a:hover {
-	background-color: rgba(0, 0, 0, 0.1); /* Shows slightly darker tint */
+  background-color: rgba(0, 0, 0, 0.1); /* Shows slightly darker tint */
 }
 
 /* Focus elements for keyboard navigation */
 .header-nav a:focus-visible,
 .hamburger:focus-visible {
-	outline: 2px solid #005fcc;
-	outline-offset: 2px;
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
 }
 
 .hamburger {
-	display: none; /* Hidden by default on desktop */
-	background: none;
-	border: none;
-	padding: 0.5rem 0 0.5rem 0.5rem;
-	cursor: pointer;
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  cursor: pointer;
 }
 
 /***
@@ -173,61 +173,61 @@ header .container {
  * Styles for the full-width hero banner at the top of the page.
  */
 .hero {
-	position: relative;
-	min-height: 60vh;
-	display: grid;
-	place-items: center;
-	padding: 4rem 0;
-	color: var(--clr-light);
+  position: relative;
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  padding: 4rem 0;
+  color: var(--clr-light);
 }
 
 .hero::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background-color: rgba(0, 0, 0, 0.6);
-	z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .hero-image {
-	position: absolute;
-	inset: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .hero-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover; /* Cover entire area without distortion */
-	opacity: 0;
-	transition: opacity 0.4s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover entire area without distortion */
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .hero-image img.loaded {
-	opacity: 1;
+  opacity: 1;
 }
 
 .hero-content {
-	position: relative;
-	z-index: 2;
-	text-align: center;
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
 .hero-text h1 {
-	font-size: clamp(2.5rem, 5vw, 4rem);
-	font-weight: 700;
-	margin-bottom: 0.5rem;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text p {
-	font-size: clamp(1rem, 2.5vw, 1.25rem);
-	max-width: 60ch;
-	margin-inline: auto;
-	margin-bottom: 2em;
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  max-width: 60ch;
+  margin-inline: auto;
+  margin-bottom: 2em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /***
@@ -235,24 +235,26 @@ header .container {
  * Reusable button style
  */
 .button {
-	display: inline-block;
-	background-color: var(--clr-light);
-	color: var(--clr-dark);
-	padding: 0.75em 1.5em;
-	border-radius: 5px;
-	font-weight: 700;
-	text-decoration: none;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .button:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .button:focus-visible {
-	outline: 3px solid var(--clr-light);
-	outline-offset: 3px;
+  outline: 3px solid var(--clr-light);
+  outline-offset: 3px;
 }
 
 /***
@@ -260,67 +262,69 @@ header .container {
  * Styles for the services display area.
  */
 .services-section {
-	padding-block: 4rem; /* Adds space above and below the section */
+  padding-block: 4rem; /* Adds space above and below the section */
 }
 
 .section-title {
-	text-align: center;
-	font-size: clamp(2rem, 4vw, 2.75rem);
-	margin-top: 0;
-	margin-bottom: 2rem;
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 .services-grid {
-	display: grid;
-	/* Create 3 equal-width columns on desktop */
-	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem; /* The space between placards */
+  display: grid;
+  /* Create 3 equal-width columns on desktop */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* The space between placards */
 }
 
 .service-placard {
-	background-color: var(--clr-dark);
-	border: 1px solid #444;
-	border-radius: 8px;
-	overflow: hidden; /* Ensures the image respects the border-radius */
-	display: flex;
-	flex-direction: column;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--clr-dark);
+  border: 1px solid #444;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the image respects the border-radius */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .service-placard:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .placard-image img {
-	width: 100%;
-	height: auto;
-	aspect-ratio: 16 / 9;
-	object-fit: cover;
-	display: block;
-	opacity: 0;
-	transition: opacity 0.4s ease-in-out;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .placard-image img.loaded {
-	opacity: 1;
+  opacity: 1;
 }
 
 .placard-content {
-	padding: 1.5rem;
-	flex-grow: 1; /* Allows content to fill available space */
+  padding: 1.5rem;
+  flex-grow: 1; /* Allows content to fill available space */
 }
 
 .placard-title {
-	margin-top: 0;
-	margin-bottom: 0.75rem;
-	font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
 }
 
 .placard-description {
-	margin-bottom: 0;
-	color: #ccc; /* Slightly lighter than pure white for contrast */
+  margin-bottom: 0;
+  color: #ccc; /* Slightly lighter than pure white for contrast */
 }
 
 /***
@@ -328,82 +332,84 @@ header .container {
  * Styles for the contact form area.
  */
 .contact-section {
-	background-color: var(--clr-dark);
-	padding-block: 4rem;
+  background-color: var(--clr-dark);
+  padding-block: 4rem;
 }
 
 .contact-layout {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 3rem;
-	align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
 }
 
 .contact-text .section-title {
-	text-align: left;
+  text-align: left;
 }
 
 .contact-text p {
-	font-size: 1.125rem;
-	color: #ccc;
-	line-height: 1.6;
+  font-size: 1.125rem;
+  color: #ccc;
+  line-height: 1.6;
 }
 
 .contact-form {
-	display: grid;
-	gap: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .form-group {
-	position: relative;
+  position: relative;
 }
 
 .form-group label {
-	position: absolute;
-	left: 0.75em;
-	transform: translateY(-50%);
-	color: #ffffff;
-	pointer-events: none;
-	transition: all 0.2s ease-in-out;
+  position: absolute;
+  left: 0.75em;
+  transform: translateY(-50%);
+  color: #ffffff;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .form-group input:required + label::after,
 .form-group textarea:required + label::after {
-	content: " *";
-	color: #ff0000;
+  content: " *";
+  color: #ff0000;
 }
 
 .form-group input,
 .form-group textarea {
-	background-color: var(--clr-darkgrey);
-	color: var(--clr-light);
-	border: 1px solid #444;
-	border-radius: 5px;
-	padding: 0.75em;
-	font-family: inherit;
-	font-size: 1rem;
-	width: 100%;
-	transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: var(--clr-darkgrey);
+  color: var(--clr-light);
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 0.75em;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:focus + label,
 .form-group textarea:not(:placeholder-shown) + label {
-	top: 0;
-	transform: translateY(-50%);
-	font-size: 1.1rem;
-	font-weight: 500;
-	padding-inline: 0.25em;
-	color: #ffffff;
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-inline: 0.25em;
+  color: #ffffff;
 }
 
 .form-group textarea {
-	resize: vertical;
+  resize: vertical;
 }
 
 #fax_number {
-	display: none;
+  display: none;
 }
 
 /*** 
@@ -417,48 +423,48 @@ header .container {
 
 /* Ensure the label has a higher z-index so it's always on top */
 .form-group label {
-	z-index: 3;
+  z-index: 3;
 }
 
 /* Create the overlay panel for the message box */
 .form-group:has(#message)::before {
-	content: "";
-	position: absolute;
-	top: 1px;
-	left: 1px;
-	right: 1px;
-	height: var(--textarea-header-height);
-	background-color: var(--clr-darkgrey);
-	z-index: 2; /* Places this panel ON TOP of the textarea */
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  height: var(--textarea-header-height);
+  background-color: var(--clr-darkgrey);
+  z-index: 2; /* Places this panel ON TOP of the textarea */
 }
 
 /* Ensure the textarea text starts below the overlay */
 #message {
-	padding-top: var(--textarea-header-height);
+  padding-top: var(--textarea-header-height);
 }
 
 /* --- End of Textarea Scrolling Fix --- */
 
 .contact-form .button {
-	width: 100%;
-	border: none;
-	cursor: pointer;
-	padding: 0.85em 1.5em;
-	font-size: 1rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 0.85em 1.5em;
+  font-size: 1rem;
 }
 
 .error-message {
-	font-size: 0.875rem;
-	color: #ff9a9a;
-	margin-top: 0.5rem;
-	min-height: 1.25em;
+  font-size: 0.875rem;
+  color: #ff9a9a;
+  margin-top: 0.5rem;
+  min-height: 1.25em;
 }
 
 .form-status {
-	margin-top: 1rem;
-	font-weight: 700;
-	text-align: center;
-	min-height: 1.25em; /* Prevents layout shift */
+  margin-top: 1rem;
+  font-weight: 700;
+  text-align: center;
+  min-height: 1.25em; /* Prevents layout shift */
 }
 
 /***
@@ -472,78 +478,80 @@ header .container {
  * Responsive Overrides
  */
 @media (max-width: 768px) {
-	header .container {
-		/* Switch to a 2-column grid on mobile: [Brand] [Hamburger] */
-		grid-template-columns: 1fr auto;
-		position: relative;
-	}
+  header .container {
+    /* Switch to a 2-column grid on mobile: [Brand] [Hamburger] */
+    grid-template-columns: 1fr auto;
+    position: relative;
+  }
 
-	.header-nav {
-		grid-column: initial; /* Resets the desktop grid placement */
+  .header-nav {
+    grid-column: initial; /* Resets the desktop grid placement */
 
-		position: absolute; /* Take the nav out of the document flow so it can be a dropdown */
-		top: 100%; /* Position nav directly below the header */
-		right: 0;
-		min-width: 150px;
-		background-color: darkblue;
+    position: absolute; /* Take the nav out of the document flow so it can be a dropdown */
+    top: 100%; /* Position nav directly below the header */
+    right: 0;
+    min-width: 150px;
+    background-color: darkblue;
 
-		/* Nav menu drop-down animation */
-		display: grid;
-		grid-template-rows: 0fr; /* Start with rows collapsed */
-		visibility: hidden;
-		transition: grid-template-rows 0.3s ease, visibility 0.3s ease;
+    /* Nav menu drop-down animation */
+    display: grid;
+    grid-template-rows: 0fr; /* Start with rows collapsed */
+    visibility: hidden;
+    transition:
+      grid-template-rows 0.3s ease,
+      visibility 0.3s ease;
 
-		border-radius: 0 0 5px 5px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		z-index: 100;
-	}
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
 
-	.header-nav.open {
-		grid-template-rows: 1fr; /* Expand the row to fit content */
-		visibility: visible;
-	}
+  .header-nav.open {
+    grid-template-rows: 1fr; /* Expand the row to fit content */
+    visibility: visible;
+  }
 
-	.header-nav ul {
-		flex-direction: column; /* Stacks the nav links vertically */
-		text-align: left;
-		overflow: hidden; /* Supports the grid animation */
-	}
+  .header-nav ul {
+    flex-direction: column; /* Stacks the nav links vertically */
+    text-align: left;
+    overflow: hidden; /* Supports the grid animation */
+  }
 
-	.header-nav a {
-		display: block;
-		padding: 0.75rem 1.25rem;
-		color: var(--clr-light);
-	}
+  .header-nav a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--clr-light);
+  }
 
-	.header-nav a:focus-visible {
-		outline: none; /* Remove the blue outlined box indicating keyboard focus */
-		box-shadow: inset 0 0 0 2px #005fcc; /* Replace indicator */
-	}
+  .header-nav a:focus-visible {
+    outline: none; /* Remove the blue outlined box indicating keyboard focus */
+    box-shadow: inset 0 0 0 2px #005fcc; /* Replace indicator */
+  }
 
-	.hamburger {
-		display: block; /* Makes the hamburger icon visible */
-		grid-column: 2 / 3; /* Places it in the second column of the mobile grid */
-	}
+  .hamburger {
+    display: block; /* Makes the hamburger icon visible */
+    grid-column: 2 / 3; /* Places it in the second column of the mobile grid */
+  }
 
-	.services-grid {
-		/* Switch to 2 columns on tablet-sized screens */
-		grid-template-columns: repeat(2, 1fr);
-	}
+  .services-grid {
+    /* Switch to 2 columns on tablet-sized screens */
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-	.contact-layout {
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 
-	.contact-text .section-title,
-	.contact-text p {
-		text-align: center; /* Center the text on mobile */
-	}
+  .contact-text .section-title,
+  .contact-text p {
+    text-align: center; /* Center the text on mobile */
+  }
 }
 
 @media (max-width: 550px) {
-	.services-grid {
-		/* Switch to a single column on small mobile screens */
-		grid-template-columns: 1fr;
-	}
+  .services-grid {
+    /* Switch to a single column on small mobile screens */
+    grid-template-columns: 1fr;
+  }
 }

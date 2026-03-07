@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dirofftech.com/sitemap.txt
+Sitemap: https://www.dirofftech.com/sitemap.txt
