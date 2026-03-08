@@ -1,6 +1,6 @@
 # Diroff Technology Consulting Website Source Code
 
-This is the home page for **Diroff Technology Consulting**.
+This is the home page for **Diroff Technology Consulting**. Check out the [live site](https://www.dirofftech.com)!
 
 Completely built by hand without any frameworks. Specific focus was made on semantics, accessibility, architecture, maintainability, responsiveness and optimization.
 
